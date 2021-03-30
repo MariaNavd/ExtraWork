@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -27,7 +20,7 @@ namespace ExtraWorkWindowsFormsApp
         public void select()
         {
             string Connect = "Database = extrawork; Data Source = localhost; " +
-                "UserId = root; Password = lglmchicha14MNp";
+                "UserId = root; Password = ****";
 
             MySqlConnection connection = new MySqlConnection(Connect);
             connection.Open();
