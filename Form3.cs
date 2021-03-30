@@ -1,12 +1,5 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -23,7 +16,7 @@ namespace ExtraWorkWindowsFormsApp
         private void Form3_Load(object sender, EventArgs e)
         {
             string Connect = "Database = extrawork; Data Source = localhost; " +
-                "UserId = root; Password = lglmchicha14MNp";
+                "UserId = root; Password = ****";
             try
             {
                 MySqlConnection connection = new MySqlConnection(Connect);
@@ -59,7 +52,7 @@ namespace ExtraWorkWindowsFormsApp
         private void button1_Click(object sender, EventArgs e)
         {
             string Connect = "Database = extrawork; Data Source = localhost; " +
-                "UserId = root; Password = lglmchicha14MNp";
+                "UserId = root; Password = ****";
             try
             {
                 MySqlConnection connection = new MySqlConnection(Connect);
