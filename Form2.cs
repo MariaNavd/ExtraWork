@@ -1,12 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -21,14 +15,14 @@ namespace ExtraWorkWindowsFormsApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\Мария\OneDrive\Документы\Инфа\1537189754.jpg");
+            pictureBox1.Image = Image.FromFile(@"C:\Users\Мария\Изображения\no_name.jpg");
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             string Connect = "Database = extrawork; Data Source = localhost; " +
-                "UserId = root; Password = lglmchicha14MNp";
+                "UserId = root; Password = ****";
 
             try
             {
@@ -64,16 +58,16 @@ namespace ExtraWorkWindowsFormsApp
 
                 connection.Close();
 
-                string path = @"C:\Users\Мария\OneDrive\Документы\Инфа\Допы\EmpPhoto";
+                string path = @"C:\Users\Мария\Документы\EmpPhoto";
 
                 DirectoryInfo dirInfo = new DirectoryInfo(path);
                 if (!dirInfo.Exists)
                 {
                     dirInfo.Create();
-                    MessageBox.Show(@"C:\Users\Мария\OneDrive\Документы\Инфа\EmpPhoto");
+                    MessageBox.Show(@"C:\Users\Мария\Документы\EmpPhoto");
                 }
 
-                pictureBox1.Image.Save(@"C:\Users\Мария\OneDrive\Документы\Инфа\Допы\EmpPhoto\" + firstName.Text + " " + secondName.Text + ".jpg");
+                pictureBox1.Image.Save(@"C:\Users\Мария\Документы\EmpPhoto\" + firstName.Text + " " + secondName.Text + ".jpg");
             }
             catch (Exception ex)
             {
